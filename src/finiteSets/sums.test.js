@@ -55,7 +55,19 @@ test('Verifying error instances of finSumRank', () => {
 })
 
 // TODO: Remover .toString() whenever jest supports BigInt
-test('Verifying for several values for that finSumRank and finSumUnrank are inverses.', () => {
+test('Verifying for some small values that finSumRank and finSumUnrank are inverses.', () => {
+  for(let i=0n; i<45n; i++) {
+    expect(finSumRank(
+    [0n, 1n, 2n, 3n, 4n, 5n, 6n, 7n, 8n, 9n],
+    finSumUnrank(
+    [0n, 1n, 2n, 3n, 4n, 5n, 6n, 7n, 8n, 9n]
+    ,i)).toString()
+    ).toBe(i.toString())
+  }
+})
+
+// TODO: Remover .toString() whenever jest supports BigInt
+test('Verifying for several values that finSumRank and finSumUnrank are inverses.', () => {
   expect(finSumRank(
   [40n, 27n, 3n, 0n, 10n, 20n, 9n, 34n, 43n, 9n, 17n, 37n, 20n, 21n, 43n, 28n, 28n, 29n, 4n, 6n, 45n, 2n, 36n, 2n, 4n, 7n]
   ,finSumUnrank(
