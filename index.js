@@ -1,3 +1,1 @@
-var i = {}
-
-import('./src/auxiliary/bigIntLog.js').then((value) => {i = {...i, ...value}})
+export {flLog, clLog} from './src/auxiliary/bigIntLog.js'
