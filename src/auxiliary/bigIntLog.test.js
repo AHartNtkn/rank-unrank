@@ -1,6 +1,6 @@
 import {flLog, clLog} from './bigIntLog.js'
 
-test('Verifying values for < 100 combinations for flLog.', () => {
+test('Verifying low values for flLog.', () => {
   for (let i = 2; i < 100; i++) {
   for (let j = 1; j < 100; j++) {
     expect(
@@ -40,7 +40,7 @@ test('Verifying several large values for flLog.', () => {
 //       and my implementation matches it for all arguments
 //       2 <= i <= 1000 and 2 <= j <= 1000
 /*
-test('Verfying values for < 100 combinations for clLog.', () => {
+test('Verfying low values for clLog.', () => {
   for (let i = 2; i < 100; i++) {
   for (let j = 1; j < 100; j++) {
     expect(
