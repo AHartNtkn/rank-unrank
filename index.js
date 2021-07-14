@@ -1,3 +1,3 @@
 var i = {}
 
-import('./auxiliary/bigIntLog.js').then((value) => {i = {...i, ...value}})
+import('./src/auxiliary/bigIntLog.js').then((value) => {i = {...i, ...value}})
