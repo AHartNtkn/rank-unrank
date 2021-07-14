@@ -5,3 +5,8 @@ export {
   finSumUnrankI, finSumRankI,
   finSumUnrank, finSumRank
 } from './src/finiteSets/sums.js'
+export {
+  finProdCard,
+  finProdUnrankI, finProdRankI,
+  finProdUnrank, finProdRank
+} from './src/finiteSets/products.js'
