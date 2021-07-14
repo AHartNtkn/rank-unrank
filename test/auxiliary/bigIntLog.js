@@ -11,9 +11,8 @@ console.log('=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*')
 
 console.log('Verifying values for < 100 combinations for flLog.')
 
-// TODO: Expand beyond base 36
 failure = false
-for (let i = 2; i < 37; i++) {
+for (let i = 2; i < 100; i++) {
     for (let j = 1; j < 100; j++) {
       if(
         flLog(BigInt(i), BigInt(j)) !=
@@ -39,8 +38,6 @@ failure = false
 
 console.log('Verifying several large values for flLog.')
 
-// TODO: Uncomment tests
-/*
 if (
   flLog(
     438256234875926478936278n,  
@@ -60,7 +57,6 @@ if (
     failure = true
     console.log('Failed on test #2.')
   } 
-*/
 
 if (
   flLog(

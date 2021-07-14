@@ -2,13 +2,21 @@ export {
   flLog, clLog
 };
 
-// TODO: Improve so base can go beyond 36.
+// TODO: Improve implementation if possible
 
 // Floor Logarithm
 function flLog(base, n) {
-  return BigInt(n.toString(Number(base)).length - 1)
+  let l = 0n;
+
+  while (n > 0n) {
+    l++
+    n /= base
+  }
+
+  return l-1n
 }
 
+// TODO: Improve Ceiling
 // Ceiling Logarithm
 function clLog(base, n) {
   if (n == 1n) {
