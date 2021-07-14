@@ -34,7 +34,7 @@ test('Verifying several large values for flLog.', () => {
 //       This test fails on powers of 3 base 3.
 //       For example, Javascript gives
 //          Math.ceil(Math.log(9)/Math.log(3))
-//       as 3 (for floating point error reasons), but it should be 2.
+//       as 3 (for floating point reasons), but it should be 2.
 //       I tested clLog against Mathematica's
 //          Ceiling[Log[i, j]]
 //       and my implementation matches it for all arguments
