@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "node test/testRunner.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/AHartNtkn/rank-unrank/issues"
   },
-  "homepage": "https://github.com/AHartNtkn/rank-unrank#readme"
+  "homepage": "https://github.com/AHartNtkn/rank-unrank#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.7",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6"
+  },
+  "dependencies": {}
 }
