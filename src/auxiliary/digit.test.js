@@ -12,6 +12,7 @@ test('Verifying for low values that digit and undigit are inverses.', () => {
   }}
 })
 
+// TODO: Remove .toString() whenever jest supports BigInt
 test('Verifying several specific values.', () => {
   expect(digit(48n,38426n).toString()).toBe(
   [26n, 32n, 16n]
