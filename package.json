@@ -2,6 +2,7 @@
   "name": "rank-unrank",
   "version": "0.0.1",
   "description": "A library for enumerative combinatorics.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "node test/testRunner.js"
