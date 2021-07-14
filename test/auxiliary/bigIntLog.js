@@ -11,6 +11,7 @@ console.log('=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*')
 
 console.log('Verifying values for < 100 combinations for flLog.')
 
+// TODO: Expand beyond base 36
 failure = false
 for (let i = 2; i < 37; i++) {
     for (let j = 1; j < 100; j++) {
@@ -38,6 +39,7 @@ failure = false
 
 console.log('Verifying several large values for flLog.')
 
+// TODO: Uncomment tests
 /*
 if (
   flLog(
@@ -84,6 +86,7 @@ failure = false
 
 console.log('Verfying values for < 100 combinations for clLog.')
 
+// TODO: Expand beyond base 36
 for (let i = 2; i < 37; i++) {
     for (let j = 1; j < 100; j++) {
       if(
@@ -110,6 +113,7 @@ failure = false
 
 console.log('Verifying several large values for clLog.')
 
+// TODO: Uncomment tests
 /*
 if (
   clLog(
