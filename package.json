@@ -1,0 +1,25 @@
+{
+  "name": "rank-unrank",
+  "version": "0.0.1",
+  "description": "A library for enumerative combinatorics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AHartNtkn/rank-unrank"
+  },
+  "keywords": [
+    "rank",
+    "unrank",
+    "combinatorics",
+    "enumeration"
+  ],
+  "author": "Anthony Hart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AHartNtkn/rank-unrank/issues"
+  },
+  "homepage": "https://github.com/AHartNtkn/rank-unrank#readme"
+}
