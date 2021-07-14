@@ -1,8 +1,6 @@
 export {
   negElemError, bigElemError,
-  zeroFinError, negFinError,
-  negSumError, negSumIError, bigSumError,
-  tupProdError, zeroProdError
+  zeroFinError, negFinError
 };
 
 const negElemError = Error('Elements of finite sets cannot be negative.')
