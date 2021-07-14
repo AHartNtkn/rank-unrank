@@ -2,9 +2,8 @@ export {
   flLog, clLog
 };
 
-// TODO: Improve implementation if possible
-
 // Floor Logarithm
+// Warning: This will run forever if base is set to 1.
 function flLog(base, n) {
   let l = 0n;
 
@@ -16,12 +15,20 @@ function flLog(base, n) {
   return l-1n
 }
 
-// TODO: Improve Ceiling
 // Ceiling Logarithm
+// Warning: This will run forever if base is set to 1.
 function clLog(base, n) {
-  if (n == 1n) {
-    return 0n
+  let l = 0n;
+
+  while (n > 1n) {
+    if (n % base == 0) {
+      n /= base
+    } else {
+      n /= base
+      n++
+    }
+    l++
   }
 
-  return BigInt((n-1n).toString(Number(base)).length)
+  return l
 }
