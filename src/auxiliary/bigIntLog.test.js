@@ -37,7 +37,7 @@ test('Verifying several large values for flLog.', () => {
 //       as 3 (for floating point error reasons), but it should be 2.
 //       I tested clLog against Mathematica's
 //          Ceiling[Log[i, j]]
-//       and my implemention matches it for all arguments
+//       and my implementation matches it for all arguments
 //       2 <= i <= 1000 and 2 <= j <= 1000
 /*
 test('Verfying values for < 100 combinations for clLog.', () => {
