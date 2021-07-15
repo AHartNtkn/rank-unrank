@@ -1,4 +1,5 @@
 export {flLog, clLog} from './src/auxiliary/bigIntLog.js'
+export {enumerate} from './src/ultilities/enumerate.js'
 export {digit, undigit} from './src/auxiliary/digit.js'
 export {
   finSumCard,
