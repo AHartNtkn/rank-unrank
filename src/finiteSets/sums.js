@@ -12,7 +12,7 @@ import { negFinError } from './errors.js';
 // Represented by a pair consisting of an index within the sum
 // and an element of that part of the sum.
 
-// Example: [3n, 9n] is an element of the coproduct represented by
+// Example: [3n, 8n] is an element of the coproduct represented by
 //          [1n, 0n, 20n, 10n, 17n]
 //          where 3n is an index and 8n is an element of the finite
 //          set 10n.
