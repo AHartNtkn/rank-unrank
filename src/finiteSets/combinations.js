@@ -28,20 +28,44 @@ function combUnrankI(finSet, length, rank) {
   let comb = []
   let n = finSet
   let choose = length
-  let i = 0n
 
   while (choose > 0) {
     let c = combCard(n-1n, choose-1n)
 
-    if (rank < c) {
-      comb.push(i)
-      choose--
+    if (rank >= combCard(n-1n, choose-1n)) {
+      // Note: the sum from l to h of n over Binomial[n, ch]
+      //       is Binomial[1 + h, 1 + ch] - Binomial[l, 1 + ch]
+
+      // Binary search for v where l = n - v
+      // This will find the largest l such that the above is less than 'rank'.
+      let vl = 0n
+      let vh = n
+      let va = undefined
+
+      while (vl+1n != vh) {
+        va = (vh + vl) / 2n
+        if (0 < rank - combCard(n, choose) + combCard(n-va, choose)) {
+          vl = va
+        } else {
+          vh = va
+        }
+      }
+
+      let v = undefined
+      if (0 <= rank - combCard(n, choose) + combCard(n-vh, choose)) {
+        v = vh
+      } else {
+        v = vl
+      }
+
+      rank -= combCard(n, choose) - combCard(n-v, choose)
+      n -= v
     } else {
-      rank -= c
+      comb.push(finSet-n)
+      choose--
+      n--
     }
 
-    n--
-    i++
   }
 
   return comb
@@ -55,20 +79,23 @@ function combRankI(finSet, comb) {
   }
 
   let index = comb.length - 1
-  let i = 1n + comb[index]
-  let n = finSet - i
+  let n = finSet - comb[index] - 1n
   let choose = 0n
   let rank = 0n
-
-  while (i > 0) {
+  while (n < finSet) {
     n++
-    i--
 
-    if (i == comb[[index]]) {
+    if (finSet - n != comb[[index]] && index >= 0) {
+      rank += combCard(finSet - comb[[index]]-1n, choose)
+              - combCard(n-1n, choose)
+      n += finSet - comb[[index]] - n - 1n
+    } else if (index < 0) {
+      rank += combCard(finSet, choose)
+              - combCard(n-1n, choose)
+      n += finSet - n
+    } else {
       index--
       choose++
-    } else {
-      rank += combCard(n-1n, choose-1n)
     }
   }
 
