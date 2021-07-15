@@ -85,7 +85,7 @@ test('Test empty product.', () => {
   }).toThrow(tupProdError)
 })
 
-// TODO: Remover .toString() whenever jest supports BigInt
+// TODO: Remove .toString() whenever jest supports BigInt
 test('Verifying for some small values that finProdRank and finProdUnrank are inverses.', () => {
   for(let i=0n; i<5040n; i++) {
     expect(finProdRank(
@@ -97,7 +97,7 @@ test('Verifying for some small values that finProdRank and finProdUnrank are inv
   }
 })
 
-// TODO: Remover .toString() whenever jest supports BigInt
+// TODO: Remove .toString() whenever jest supports BigInt
 test('Verifying for several values that finProdRank and finProdUnrank are inverses.', () => {
   expect(finProdRank(
   [2n, 23n, 11n, 17n, 22n, 15n, 13n, 24n, 4n]
