@@ -87,11 +87,11 @@ test('Test empty product.', () => {
 
 // TODO: Remover .toString() whenever jest supports BigInt
 test('Verifying for some small values that finProdRank and finProdUnrank are inverses.', () => {
-  for(let i=0n; i<40320n; i++) {
+  for(let i=0n; i<5040n; i++) {
     expect(finProdRank(
-    [1n, 2n, 3n, 4n, 5n, 6n, 7n, 8n],
+    [1n, 2n, 3n, 4n, 5n, 6n, 7n],
     finProdUnrank(
-    [1n, 2n, 3n, 4n, 5n, 6n, 7n, 8n]
+    [1n, 2n, 3n, 4n, 5n, 6n, 7n]
     ,i)).toString()
     ).toBe(i.toString())
   }
