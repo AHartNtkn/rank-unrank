@@ -11,3 +11,8 @@ export {
   finProdUnrankI, finProdRankI,
   finProdUnrank, finProdRank
 } from './src/finiteSets/products.js'
+export {
+  combCard,
+  combUnrankI, combRankI,
+  combUnrank, combRank
+} from './src/finiteSets/combinations.js'
