@@ -138,7 +138,7 @@ function combRank(finSet, comb) {
     throw negFinError
   }
 
-  // Check sorting and uniquness
+  // Check sorting and uniqueness
   for (let i = 0; i < comb.length - 1; i++) {
     if (comb[i] > comb[i+1]) {
       throw sortedError
