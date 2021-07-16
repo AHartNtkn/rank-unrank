@@ -16,3 +16,8 @@ export {
   combUnrankI, combRankI,
   combUnrank, combRank
 } from './src/finiteSets/combinations.js'
+export {
+  permCard,
+  permUnrankI, permRankI,
+  finSeqUnrank, finSeqRank
+} from './src/finiteSets/permutations/permutations.js'
